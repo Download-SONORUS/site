@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SONORUS - Reproductor de Audio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: #1DB954;
+            font-weight: bold;
+        }
+
+        .desc {
+            max-width: 600px;
+            margin: 20px auto;
+            font-size: 1.2rem;
+        }
+
+        .info {
+            max-width: 700px;
+            background-color: #222;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .download-btn {
+            padding: 15px 30px;
+            background-color: #1DB954;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #17a44b;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">SONORUS</div>
+        <p class="desc">Tu nuevo reproductor de audio. Ligero, sin publicidad, fácil de usar. Descárgalo y comienza a
+            disfrutar tu música favorita.</p>
+        <button class="download-btn" onclick="window.location.href='descargas/CH341SER.exe'">Descargar SONORUS
+            (.exe)</button>
+    </header>
+
+    <section class="info">
+        <h2>¿Qué es SONORUS?</h2>
+        <p>SONORUS es un reproductor de audio gratuito, liviano y sin publicidad, creado para ofrecerte una experiencia
+            musical simple y agradable. Está diseñado para todo tipo de usuarios mayores de 7 años, ya sea con fines
+            educativos, de entretenimiento o simplemente para disfrutar tu música favorita sin distracciones.</p>
+        <p>Su interfaz intuitiva y su compatibilidad con sistemas Windows de 64 bits lo hacen ideal para quienes buscan
+            una solución funcional, estética y práctica. Además, no requiere conexión a internet ni incluye anuncios
+            molestos.</p>
+    </section>
+
+    <footer>
+        Proyecto desarrollado por estudiantes de Teschi · Ingeniería de Software
+    </footer>
+</body>
+
+</html>
