@@ -66,22 +66,13 @@
             color: #777;
         }
 
-        .botones {
+       .botones {
             display: flex;
-            flex-direction: row;
             gap: 15px;
-            justify-content: center;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
-        .download-btn.secondary {
-            background-color: #444;
-            color: #fff;
-        }
-
-        .download-btn.secondary:hover {
-            background-color: #555;
-        }
 
     </style>
 </head>
@@ -91,14 +82,17 @@
         <div class="logo">SONORUS</div>
         <p class="desc">Tu nuevo reproductor de audio. Ligero, sin publicidad, fácil de usar. Descárgalo y comienza a
             disfrutar tu música favorita.</p>
+     <div class="botones">
         <button class="download-btn"
             onclick="window.location.href='https://github.com/download-sonorus/site/releases/download/v1.0/CH341SER.exe'">
             Descargar SONORUS (.exe)
         </button>
-                <button class="download-btn secondary"
+
+        <button class="download-btn"
             onclick="window.location.href='https://github.com/download-sonorus/site/releases/download/v1.0/CancionesSONORUS.zip'">
             Descargar canciones (.zip)
         </button>
+    </div>
     </header>
 
     <section class="info">
