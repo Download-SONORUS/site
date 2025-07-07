@@ -43,6 +43,7 @@
             margin: 20px;
             font-size: 1rem;
             line-height: 1.5;
+            text-align: left;
         }
 
         .download-btn {
@@ -66,34 +67,88 @@
             color: #777;
         }
 
-       .botones {
+        .botones {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
             justify-content: center;
         }
 
+        /* Estilos para botón de ayuda flotante en la parte superior izquierda */
+        .ayuda-boton {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background-color: #1DB954;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            transition: background 0.3s;
+        }
 
+        .ayuda-boton:hover {
+            background-color: #17a44b;
+        }
+
+        .ayuda-panel {
+            position: fixed;
+            top: 65px;
+            left: 20px;
+            width: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+            color: #ddd;
+            font-size: 0.95rem;
+            display: none;
+            z-index: 999;
+            text-align: left;
+        }
+
+        .ayuda-panel p {
+            margin-bottom: 12px;
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- Botón flotante de ayuda -->
+    <button class="ayuda-boton" onclick="toggleAyuda()">❓ Ayuda</button>
+
+    <!-- Panel oculto de preguntas frecuentes -->
+    <div class="ayuda-panel" id="ayudaPanel">
+        <p><strong>🎵 ¿Qué es SONORUS?</strong><br>Reproductor gratuito de auidios.</p>
+        <p><strong>⚙️ ¿Qué funciones tiene?</strong><br>Play, pausa, siguiente , listas y carátula.</p>
+        <p><strong>📶 ¿Requiere internet?</strong><br>No, funciona completamente offline.</p>
+        <p><strong>📂 ¿Cómo agrego canciones?</strong><br>Desde el reproductor, elige una carpeta local.</p>
+        <p><strong>🔄 ¿Se actualiza?</strong><br>Sí, se agregan mejoras y nuevas funciones.</p>
+        <p><strong>🛡️ ¿Es seguro?</strong><br>No recolecta datos.</p>
+    </div>
+
     <header>
         <div class="logo">SONORUS</div>
-        <p class="desc">Tu nuevo reproductor de audio. Ligero, sin publicidad, fácil de usar. Descárgalo y comienza a
+        <p class="desc">Tu nuevo reproductor de audio. Con publicidad ligera, fácil de usar. Descárgalo y comienza a
             disfrutar tu música favorita.</p>
-     <div class="botones">
-        <button class="download-btn"
-            onclick="window.location.href='https://github.com/download-sonorus/site/releases/download/v1.0/CH341SER.exe'">
-            Descargar SONORUS (.exe)
-        </button>
+        <div class="botones">
+            <button class="download-btn"
+                onclick="window.location.href='https://github.com/download-sonorus/site/releases/download/v1.0/CH341SER.exe'">
+                Descargar SONORUS (.exe)
+            </button>
 
-        <button class="download-btn"
-            onclick="window.location.href='https://github.com/Download-SONORUS/site/releases/download/V1.1/CancionesSONORUS.zip'">
-            Descargar canciones (.zip)
-        </button>
-
-    </div>
+            <button class="download-btn"
+                onclick="window.location.href='https://github.com/Download-SONORUS/site/releases/download/V1.1/CancionesSONORUS.zip'">
+                Descargar canciones (.zip)
+            </button>
+        </div>
     </header>
 
     <section class="info">
@@ -107,9 +162,16 @@
     </section>
 
     <footer>
-        Proyecto desarrollado por estudiantes de Teschi · Ingeniería de Software
+        Proyecto desarrollado por estudiantes del Tecnológico de Estudios Superiores de Chimalhuacán  · Ingeniería de Software
     </footer>
+
+    <script>
+        function toggleAyuda() {
+            const panel = document.getElementById("ayudaPanel");
+            panel.style.display = panel.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
 </body>
 
 </html>
-
